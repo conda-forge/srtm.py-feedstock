@@ -10,7 +10,7 @@ source:
     sha256: 00d58962e991c7d633f65843078b0e1f8e7f534ac1ddfd8c049effcd331ef6ad
 
 build:
-    number: 0
+    number: 1000
     skip: True  # [py3k]
     script: python setup.py install
 
