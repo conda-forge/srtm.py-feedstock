@@ -19,6 +19,7 @@ requirements:
   run:
     - python
     - requests
+    - gpxpy
 
 test:
   imports:
