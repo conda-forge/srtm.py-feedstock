@@ -1,17 +1,16 @@
-{% set version = "0.3.1" %}
+{% set version = "0.3.4" %}
 
 package:
   name: srtm.py
   version: {{ version }}
 
 source:
-  url: https://github.com/tkrajina/srtm.py/archive/v.{{ version }}.tar.gz
-  sha256: 00d58962e991c7d633f65843078b0e1f8e7f534ac1ddfd8c049effcd331ef6ad
+  url: https://pypi.io/packages/source/S/SRTM.py/SRTM.py-{{ version }}.tar.gz
+  sha256: 42cce7a63650963c619c15b749e9d754ad8fa56e277b1529865105275f4e3c9b
 
 build:
-  number: 1000
-  skip: True  # [py3k]
-  script: "{{ PYTHON }} -m pip install . -vvv"
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -20,7 +19,6 @@ requirements:
   run:
     - python
     - requests
-    - gpxpy
 
 test:
   imports:
@@ -31,7 +29,8 @@ test:
 about:
   home: https://github.com/tkrajina/srtm.py
   license: Apache-2.0
-  license_file: LICENSE.txt
+  # missing from the sdist
+  # license_file: LICENSE.txt
   summary: 'Python parser for the Shuttle Radar Topography Mission elevation data'
 
 extra:
