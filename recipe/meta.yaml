@@ -1,4 +1,4 @@
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: srtm.py
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/S/SRTM.py/SRTM.py-{{ version }}.tar.gz
-  sha256: 42cce7a63650963c619c15b749e9d754ad8fa56e277b1529865105275f4e3c9b
+  sha256: cb9f8fbb980e2af74ee9c624136dca53af9ad8a36a9e957240e9d9e0f719605d
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -33,7 +33,7 @@ about:
   license: Apache-2.0
   # missing from the sdist
   # license_file: LICENSE.txt
-  summary: 'Python parser for the Shuttle Radar Topography Mission elevation data'
+  summary: Python parser for the Shuttle Radar Topography Mission elevation data
 
 extra:
   recipe-maintainers:
