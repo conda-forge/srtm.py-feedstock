@@ -1,4 +1,4 @@
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 package:
   name: srtm.py
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/S/SRTM.py/SRTM.py-{{ version }}.tar.gz
-  sha256: cb9f8fbb980e2af74ee9c624136dca53af9ad8a36a9e957240e9d9e0f719605d
+  sha256: d721741dde00000235b20f0313c2cec62c9238814b3b726310fb24e3b1d9f499
 
 build:
   number: 0
